@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+- I'm goint to try to learn Vim, but if the learning curve proves to be too steap during the bootcamp, I'll swap to Nano.
 
 --
 

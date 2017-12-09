@@ -19,7 +19,22 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+- 'pwd' : show current working directory path
+- 'mkdir' : create a directory
+- 'ls' : list files in current directory
+- 'cd' : change directory
+- 'ls -a' : list all contents, including hidden files and directories
+- 'ls -l' : lists all contents of a directory in long format
+- 'ls -t' : order files and directories by the time they were last modified
+- commands starting with '-' are called options
+- options can be combined like 'ls -alt'. this lists all contents, including hidden files and directories, in long format, ordered by the date and time they were last modified
+- 'cp' : copies the contents of the first argument(s) to the last. (these can be files or directories)
+- 'touch' : creates a new file inside the working directory
+- '\*': wildcard. when used alone, (eg cp * mydir) it selects all files in the working directory. another use: 'm*.txt' selects all files in the working directory starting with 'm' and ending with '.txt'
+- 'mv' : move first argument(s) to last. (can also use 'mv' to rename files. eg. 'mv batman.txt spiderman.txt' moves 'batman.txt' into 'spiderman.txt', and if 'spiderman.txt' dne in the current directory, batman is renamed to spiderman
+- 'rm' : remove argument from working directory
+- 'rm -r' : ('r' stands for recursive) deletes a directory and all child directories
+
 
 ---
 

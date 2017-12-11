@@ -94,5 +94,7 @@ Sublime is interesting because it's very customizable with opensource packages r
 Some cool keyboard shortcuts:
 - Command Pallette (`shift + command + P`) : open command pallette
 - Block Select (`option + left-mouse-click`) : used to select a block of text. can use with patterns
+- Multiple cursors (`option + left-mouse-click-and-drag`) for text munging
+
 
  

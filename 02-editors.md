@@ -89,6 +89,10 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I'm going to use Sublime and customize it as I go. I chose it because the learning curve doesn't seem to be as steep as PyCharm's, though I'd eventually like to be using something like PyCharm. 
+Sublime is interesting because it's very customizable with opensource packages readily available. You can use these packages by accessing the command palette (OS X: Shift + Cmd + P). I've customized with a few packages already (Anaconda, 
+Some cool keyboard shortcuts:
+- Command Pallette ('shift + command + P') : open command pallette
+- Block Select ('option + left-mouse-click) : used to select a block of text. can use with patterns
 
  

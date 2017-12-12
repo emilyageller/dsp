@@ -71,15 +71,15 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
+`ls`  - show contents of working directory
+`ls -a`  - show contents of working directory including hidden files
+`ls -l`  - show long verson of contents in working directory
+`ls -lh`  - show long version of contents in working directory, and include unit suffixes for size
+`ls -lah` - show long version of contents in working directory, including hidden files and unit suffixes for size
+`ls -t`  - sort the contents of the working directory by time modified (most recent first)
+`ls -Glp`  - show long version of contents in working directory, with a '/' after the name if it is a directory, and enable colorized output
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+
 
 ---
 
@@ -87,7 +87,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`ls -p` for easier navigation through directories
+`ls -g` long format without owner (always me)
+`ls -pt` most recently modified first and directories highlighted with a '/'
+`ls -t1` most recently modified first in a single column
+`ls -o` long format without group
 
 ---
 
@@ -95,7 +99,9 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
+`xargs` reads data from stdin and executes the command (supplied to it as argument) one or more times based on the input read. Any blanks and spaces in input are treated as delimiters, while blank lines are ignored. 
  
+ Here's an example of how to use xargs to find all .py count the number of words:
+ 
+ `find . -name '*.py' | xargs wc -l`
 

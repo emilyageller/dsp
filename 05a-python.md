@@ -10,23 +10,45 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 ### Q1. Lists &amp; Tuples
 
-How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
+**How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?**
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Similarities:
+- They are both sequences of values, which can be of any type.
+- They are both indexed by integers
+
+Differences:
+- tuples are immutable, while lists are mutable
+
+
+The fact that tuples are immutable allow them to be used as keys in dictionaries. 
 
 ---
 
 ### Q2. Lists &amp; Sets
 
-How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
+**How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?**
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Similarities:
+- both are types that can contain other types
+
+Differences:
+- sets can't have duplicate values, while lists can
+- sets are unordered
+
+
+Performance is much better when looking for an element in sets than in lists. This is because a hash lookup is used for sets.
+
+Lists are nice to use when order is important, while sets are nice when you don't want duplicates and you don't care about order.
+
+Example:
+- list:   [1,2,3]
+- set:    {1, 2, 3}
 
 ---
 
 ### Q3. Lambda Function
 
-Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
+**Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.**
 
 >> REPLACE THIS TEXT WITH YOUR RESPONSE
 
@@ -34,9 +56,27 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 ### Q4. List Comprehension, Map &amp; Filter
 
-Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
+**Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.**
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+List comprehensions can be used instead of for loops when manipulating lists. Rather than writing a for loop, a list comprehension can be written on one line inside `[` and `]`.  They include the elements of the list and the `for` condition.  **You can't put a `print()` inside of a list comprehension, so they shouldn't be used unless the operation is relatively simple**
+
+A `map` is an operation that "maps" a function onto each of the elements in a sequence. (Eg `capitalize_all()`)
+A `filter` is an operation that selects some of the elements from a list and returns a sublist. (Eg `only_upper()`)
+A `reduce` is an operation that combines a sequence of elements into a single value. (Eg. `sum()`)
+
+Examples:
+Problem: capitalize all elements in a list `t`.
+1. List comprehension:
+      `[s.capitalize() for s in t]`
+2. `Map` and `Filter`
+      ``res = []
+        for s in t: # this is the filter
+          res.append(s.capitalize()) # capitalize is the map`` 
+3. Set comprehension:
+  `{s.capitalize() for s in t}`
+4. Dict comprehension:
+  `{s: s.capitalize() for s in t}`
+        
 
 ---
 
@@ -51,7 +91,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+937
 
 b.  
 ```
@@ -59,7 +99,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+513
 
 c.  
 ```
@@ -67,7 +107,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 

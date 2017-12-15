@@ -8,7 +8,6 @@ def donuts(count):
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
     >>> donuts(4)
     'Number of donuts: 4'
     >>> donuts(9)
@@ -18,7 +17,12 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    str1 = 'Number of donuts:'
+    str2 = 'many'
+    if count > 9:
+        print(str1, str2)
+    else:
+        print(str1, count)
 
 
 def both_ends(s):
@@ -27,7 +31,6 @@ def both_ends(s):
     2 chars of the original string, so 'spring' yields 'spng'.
     However, if the string length is less than 2, return instead the
     empty string.
-
     >>> both_ends('spring')
     'spng'
     >>> both_ends('Hello')
@@ -37,7 +40,12 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    res = ''
+    if len(s) < 2:
+        return res
+    else:
+        res = s[0:2] + s[-2:]
+        return res
 
 
 def fix_start(s):
@@ -46,7 +54,6 @@ def fix_start(s):
     first char have been changed to '*', except do not change the
     first char itself. e.g. 'babble' yields 'ba**le' Assume that the
     string is length 1 or more.
-
     >>> fix_start('babble')
     'ba**le'
     >>> fix_start('aardvark')
@@ -56,7 +63,14 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    s2 = ''
+    s2 = s[0]
+    for i in range(1, len(s)):
+        if s[0] == s[i]:
+            s2 = s2 + '*'
+        else:
+            s2 = s2 + s[i]
+    return s2
 
 
 def mix_up(a, b):
@@ -64,7 +78,6 @@ def mix_up(a, b):
     Given strings a and b, return a single string with a and b
     separated by a space '<a> <b>', except swap the first 2 chars of
     each string. Assume a and b are length 2 or more.
-
     >>> mix_up('mix', 'pod')
     'pox mid'
     >>> mix_up('dog', 'dinner')
@@ -74,7 +87,13 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    res = b[0]
+    for i in range(1, len(a)):
+        res = res + a[i]
+    res = res + ' ' + a[0]
+    for i in range(1, len(b)):
+        res = res + b[i]
+    return res
 
 
 def verbing(s):
@@ -83,7 +102,6 @@ def verbing(s):
     Unless it already ends in 'ing', in which case add 'ly' instead.
     If the string length is less than 3, leave it unchanged. Return
     the resulting string.
-
     >>> verbing('hail')
     'hailing'
     >>> verbing('swiming')
@@ -91,7 +109,12 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) > 2:
+        if s[-3:] == 'ing':
+            s = s + 'ly'
+        else:
+            s = s + 'ing'
+    return s
 
 
 def not_bad(s):
@@ -111,7 +134,7 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    
 
 
 def front_back(a, b):
@@ -130,4 +153,17 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    # My solution uses the halve_str function below #
+    a_front, a_back = halve_str(a)
+    b_front, b_back = halve_str(b)
+    return a_front + b_front + a_back + b_back
+
+
+def halve_str(a):
+    if len(a) % 2 == 0:
+        a_front = a[:int(len(a) / 2)]
+        a_back = a[int(len(a) / 2):]
+    else:
+        a_front = a[:int(len(a) / 2) + 1]
+        a_back = a[int(len(a) / 2) + 1:]
+    return a_front, a_back

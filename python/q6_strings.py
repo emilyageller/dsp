@@ -134,7 +134,15 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    
+    if 'not' in s and 'bad' in s:
+        n = s.find('not')
+        b = s.find('bad')
+        s2 = ''
+        if n < b:
+            s2 = s[:n] + 'good' + s[(b + 3):]
+            return s2
+        else:
+            return s
 
 
 def front_back(a, b):

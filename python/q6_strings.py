@@ -87,11 +87,11 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    res = b[0]
-    for i in range(1, len(a)):
+    res = b[:2]
+    for i in range(2, len(a)):
         res = res + a[i]
-    res = res + ' ' + a[0]
-    for i in range(1, len(b)):
+    res = res + ' ' + a[:2]
+    for i in range(2, len(b)):
         res = res + b[i]
     return res
 
@@ -143,6 +143,8 @@ def not_bad(s):
             return s2
         else:
             return s
+    else:
+        return s
 
 
 def front_back(a, b):

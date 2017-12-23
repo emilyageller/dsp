@@ -50,7 +50,16 @@ Example:
 
 **Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.**
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+The lambda function allows 'anonymous' functions to be created at runtime.  This can be used in list comprehensions, in map, filter and reduce and in any other place where a function is required inside another operator, but no where else. Eg it is not 'callable'.
+
+
+Eg:
+      `mylist = [(3,5,8),(6,2,8),(2,9,4),(6,8,5)]
+      sorted(mylist, key = lambda x: x[0])`
+      
+      result:
+      
+      `[(6,2,8),(3,5,8),(6,8,5),(2,9,4)]`
 
 ---
 
@@ -123,11 +132,13 @@ Done
 ### Q7. Lists
 Edit the 5 functions in [q7_lists.py](python/q7_lists.py)
 
+Done
 ---
 
 ### Q8. Parsing
 Write a script as indicated (using the football data) in [q8_parsing.py](python/q8_parsing.py)
 
+Done
 
 
 

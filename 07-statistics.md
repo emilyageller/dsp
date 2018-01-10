@@ -88,17 +88,17 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 
 >> Solution:
 
->> Hyptheses:
->> A: Elvis was an identical twin
->> B: Elvis was a fraternal twin
+>> Hyptheses:</br>
+>> A: Elvis was an identical twin</br>
+>> B: Elvis was a fraternal twin</br>
 >>
 >> We know:
 >> ```P(A) = 1/300
 >> P(B) = 1/125
 >> ```
->> Evidence:
+>> Evidence:</br>
 >> E: Elvis' twin was male.
-
+>>
 >> Since identical twins are always of the same sex:
 >> ``` P(E|A) = 1
 >> P(E|B) = 1/2 

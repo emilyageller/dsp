@@ -105,7 +105,8 @@ P(E|B) = 1/2
 ```
 
 The law of total probability says:
-``` P(E) = P(A)P(E|A) + P(B)P(E|B)
+``` 
+P(E) = P(A)P(E|A) + P(B)P(E|B)
 ```
 
 So 

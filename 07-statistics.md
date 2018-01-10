@@ -109,6 +109,12 @@ The law of total probability says:
 P(E) = P(A)P(E|A) + P(B)P(E|B)
 ```
 
+And Bayes' Theorem says:
+```
+P(A|E) = (P(E|A)P(A))/(P(E))
+       = (P(E|A)P(A))/(P(A)P(E|A) + P(B)P(E|B))
+```
+
 So 
 ```
 P(A|E) = 5/11
